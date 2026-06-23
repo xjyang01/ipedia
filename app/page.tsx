@@ -1,16 +1,17 @@
-export const revalidate = 300
+export const revalidate = 0
+export const dynamic = 'force-dynamic'
 
 import Link from 'next/link'
 import { createClient } from '@/lib/supabase/server'
 import type { Article } from '@/lib/types'
 
 const CATEGORIES = [
-  { slug: 'people',        emoji: '👤', label: 'People',        color: '#f59e0b' },
-  { slug: 'organizations', emoji: '🏛️', label: 'Organizations', color: '#f97316' },
-  { slug: 'science',    emoji: '🔬', label: 'Science & Medicine',     color: '#10b981' },
-  { slug: 'technology', emoji: '💻', label: 'Technology & AI',        color: '#3b82f6' },
-  { slug: 'economics',  emoji: '📈', label: 'Economics & Finance',    color: '#8b5cf6' },
-  { slug: 'history',    emoji: '🌍', label: 'History & Society',      color: '#ef4444' },
+  { slug: 'science',       emoji: '🔬', label: 'Science & Medicine',  color: '#10b981' },
+  { slug: 'technology',    emoji: '💻', label: 'Technology & AI',     color: '#3b82f6' },
+  { slug: 'economics',     emoji: '📈', label: 'Economics & Finance', color: '#8b5cf6' },
+  { slug: 'history',       emoji: '🌍', label: 'History & Society',   color: '#ef4444' },
+  { slug: 'people',        emoji: '👤', label: 'People',              color: '#f59e0b' },
+  { slug: 'organizations', emoji: '🏛️', label: 'Organizations',       color: '#f97316' },
 ]
 
 function catMeta(slug: string) {
