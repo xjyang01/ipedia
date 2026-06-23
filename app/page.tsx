@@ -106,19 +106,25 @@ export default async function Home() {
       )}
 
       {/* Suggestions */}
-      <div className="rounded-2xl p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4"
-        style={{ background: 'var(--muted)', border: '1px solid var(--border)' }}>
-        <div className="flex-1">
-          <p className="font-semibold mb-1">💡 Suggestions?</p>
-          <p className="text-sm" style={{ color: '#6b7280' }}>
-            Have an idea for a new article? Send your suggested topic and a brief outline to{' '}
-            <a href="mailto:etom@buddiespace.app" className="hover:underline font-medium"
-              style={{ color: 'var(--primary)' }}>
-              etom@buddiespace.app
-            </a>
-            . We welcome submissions in the format: title, summary (2–3 sentences), key sections, and key references.
-          </p>
-        </div>
+      <div className="rounded-2xl p-6" style={{ background: 'var(--muted)', border: '1px solid var(--border)' }}>
+        <p className="font-semibold mb-2">💡 Suggestions?</p>
+        <p className="text-sm mb-3" style={{ color: '#6b7280' }}>
+          Have an idea for a new article? Send your suggested topic and a brief outline to{' '}
+          <a href="mailto:etom@buddiespace.app" className="hover:underline font-medium"
+            style={{ color: 'var(--primary)' }}>
+            etom@buddiespace.app
+          </a>.
+        </p>
+        <ul className="text-sm flex flex-col gap-1.5" style={{ color: '#6b7280' }}>
+          <li>
+            <span className="font-medium" style={{ color: '#4b5563' }}>Science & Medicine: </span>
+            title, summary (2–3 sentences), keywords, main text (composed of key sections), and selected references.
+          </li>
+          <li>
+            <span className="font-medium" style={{ color: '#4b5563' }}>Other areas: </span>
+            title, summary (2–3 sentences), and main text containing different sections where necessary.
+          </li>
+        </ul>
       </div>
 
       {/* Empty state */}
