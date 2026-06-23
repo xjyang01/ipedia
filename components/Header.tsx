@@ -5,11 +5,11 @@ import { useState } from 'react'
 import { Search } from 'lucide-react'
 
 const CATEGORIES = [
-  { slug: 'people', label: 'People' },
   { slug: 'science', label: 'Science & Medicine' },
   { slug: 'technology', label: 'Technology & AI' },
   { slug: 'economics', label: 'Economics' },
   { slug: 'history', label: 'History & Society' },
+  { slug: 'people', label: 'People' },
 ]
 
 export default function Header() {
