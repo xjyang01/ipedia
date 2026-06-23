@@ -13,10 +13,12 @@ const CATEGORIES: Record<string, { emoji: string; label: string; color: string }
   history:    { emoji: '🌍', label: 'History & Society',      color: '#ef4444' },
 }
 
-export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params
-  const supabase = await createClient()
+export default async function ArticlePage({ params }: { params: Promise<{ category: string; slug: string }> }) {
+  const { category, slug } = await params
 
+  if (!CATEGORIES[category]) notFound()
+
+  const supabase = await createClient()
   const [{ data: article }, { data: refs }] = await Promise.all([
     supabase.from('articles').select('*').eq('slug', slug).eq('status', 'published').single(),
     supabase.from('article_refs').select('*').eq('article_id', slug).order('ref_number'),

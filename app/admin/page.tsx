@@ -75,7 +75,7 @@ export default async function AdminPage() {
               </div>
               <div className="flex items-center gap-2 shrink-0">
                 {article.status === 'published' && (
-                  <Link href={`/wiki/${article.slug}`} target="_blank"
+                  <Link href={`/${article.category_slug}/${article.slug}`} target="_blank"
                     className="text-xs px-3 py-1.5 rounded-lg border hover:bg-gray-50 transition"
                     style={{ borderColor: 'var(--border)' }}>
                     View

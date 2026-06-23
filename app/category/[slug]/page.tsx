@@ -44,7 +44,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
       {articles && articles.length > 0 ? (
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {(articles as Article[]).map(article => (
-            <Link key={article.id} href={`/wiki/${article.slug}`}>
+            <Link key={article.id} href={`/${article.category_slug}/${article.slug}`}>
               <div className="card p-5 h-full hover:shadow-md transition-shadow cursor-pointer flex flex-col gap-3">
                 <div className="flex items-center justify-between">
                   {article.verified_by && (

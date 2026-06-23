@@ -33,7 +33,7 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
       {articles.length > 0 ? (
         <div className="flex flex-col gap-4">
           {articles.map(article => (
-            <Link key={article.id} href={`/wiki/${article.slug}`}>
+            <Link key={article.id} href={`/${article.category_slug}/${article.slug}`}>
               <div className="card p-5 hover:shadow-md transition-shadow cursor-pointer flex items-start gap-4">
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-1">

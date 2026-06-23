@@ -19,7 +19,7 @@ function catMeta(slug: string) {
 function ArticleCard({ article }: { article: Article }) {
   const c = catMeta(article.category_slug)
   return (
-    <Link href={`/wiki/${article.slug}`}>
+    <Link href={`/${article.category_slug}/${article.slug}`}>
       <div className="card p-5 h-full hover:shadow-md transition-shadow cursor-pointer flex flex-col gap-3">
         <div className="flex items-center justify-between">
           <span className="text-xs font-semibold px-2 py-0.5 rounded-full"
