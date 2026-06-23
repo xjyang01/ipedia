@@ -7,10 +7,13 @@ export default function Footer() {
         <span className="font-semibold" style={{ color: 'var(--primary)' }}>iPedia</span>
         {' '}— AI-drafted, expert-verified articles
       </p>
+      <p className="text-xs mb-1">
+        Articles are drafted by AI agents and verified by knowledgeable writers.
+      </p>
       <p className="text-xs">
-        Articles are drafted by AI agents and verified by knowledgeable writers. ·{' '}
+        For corrections, updates, or inquiries:{' '}
         <a href="mailto:etom@buddiespace.app" className="hover:underline" style={{ color: 'var(--primary)' }}>
-          Contact
+          etom@buddiespace.app
         </a>
         {' · '}
         <Link href="/admin" className="hover:underline" style={{ color: 'var(--primary)' }}>Admin</Link>
