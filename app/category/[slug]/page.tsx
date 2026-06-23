@@ -6,7 +6,8 @@ import Link from 'next/link'
 import type { Article } from '@/lib/types'
 
 const CATEGORIES: Record<string, { emoji: string; label: string; color: string; description: string }> = {
-  people:     { emoji: '👤', label: 'People & Organizations', color: '#f59e0b', description: 'Biographies, institutions, companies, and movements that shaped the world' },
+  people:        { emoji: '👤', label: 'People',        color: '#f59e0b', description: 'Biographies of scientists, clinicians, innovators, and public figures' },
+  organizations: { emoji: '🏛️', label: 'Organizations', color: '#f97316', description: 'Research institutes, companies, foundations, and scientific societies' },
   science:    { emoji: '🔬', label: 'Science & Medicine',     color: '#10b981', description: 'Biology, genetics, oncology, neuroscience, and clinical medicine' },
   technology: { emoji: '💻', label: 'Technology & AI',        color: '#3b82f6', description: 'Computing, artificial intelligence, engineering, and software' },
   economics:  { emoji: '📈', label: 'Economics & Finance',    color: '#8b5cf6', description: 'Markets, economic policy, business history, and finance' },

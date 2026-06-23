@@ -5,7 +5,8 @@ import { createClient } from '@/lib/supabase/server'
 import type { Article } from '@/lib/types'
 
 const CATEGORIES = [
-  { slug: 'people',     emoji: '👤', label: 'People & Organizations', color: '#f59e0b' },
+  { slug: 'people',        emoji: '👤', label: 'People',        color: '#f59e0b' },
+  { slug: 'organizations', emoji: '🏛️', label: 'Organizations', color: '#f97316' },
   { slug: 'science',    emoji: '🔬', label: 'Science & Medicine',     color: '#10b981' },
   { slug: 'technology', emoji: '💻', label: 'Technology & AI',        color: '#3b82f6' },
   { slug: 'economics',  emoji: '📈', label: 'Economics & Finance',    color: '#8b5cf6' },
@@ -102,6 +103,22 @@ export default async function Home() {
           </div>
         </div>
       )}
+
+      {/* Suggestions */}
+      <div className="rounded-2xl p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4"
+        style={{ background: 'var(--muted)', border: '1px solid var(--border)' }}>
+        <div className="flex-1">
+          <p className="font-semibold mb-1">💡 Suggestions?</p>
+          <p className="text-sm" style={{ color: '#6b7280' }}>
+            Have an idea for a new article? Send your suggested topic and a brief outline to{' '}
+            <a href="mailto:etom@buddiespace.app" className="hover:underline font-medium"
+              style={{ color: 'var(--primary)' }}>
+              etom@buddiespace.app
+            </a>
+            . We welcome submissions in the format: title, summary (2–3 sentences), key sections, and key references.
+          </p>
+        </div>
+      </div>
 
       {/* Empty state */}
       {(!recent || recent.length === 0) && (

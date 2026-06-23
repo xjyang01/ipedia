@@ -6,7 +6,8 @@ import type { Article, ArticleRef } from '@/lib/types'
 export const revalidate = 300
 
 const CATEGORIES: Record<string, { emoji: string; label: string; color: string }> = {
-  people:     { emoji: '👤', label: 'People & Organizations', color: '#f59e0b' },
+  people:        { emoji: '👤', label: 'People',        color: '#f59e0b' },
+  organizations: { emoji: '🏛️', label: 'Organizations', color: '#f97316' },
   science:    { emoji: '🔬', label: 'Science & Medicine',     color: '#10b981' },
   technology: { emoji: '💻', label: 'Technology & AI',        color: '#3b82f6' },
   economics:  { emoji: '📈', label: 'Economics & Finance',    color: '#8b5cf6' },

@@ -10,6 +10,7 @@ const CATEGORIES = [
   { slug: 'economics', label: 'Economics' },
   { slug: 'history', label: 'History & Society' },
   { slug: 'people', label: 'People' },
+  { slug: 'organizations', label: 'Organizations' },
 ]
 
 export default function Header() {

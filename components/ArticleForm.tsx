@@ -5,7 +5,8 @@ import type { Article, ArticleRef, ArticleSection } from '@/lib/types'
 import { Plus, Trash2 } from 'lucide-react'
 
 const CATEGORIES = [
-  { slug: 'people',     label: 'People & Organizations' },
+  { slug: 'people',     label: 'People' },
+  { slug: 'organizations', label: 'Organizations' },
   { slug: 'science',    label: 'Science & Medicine' },
   { slug: 'technology', label: 'Technology & AI' },
   { slug: 'economics',  label: 'Economics & Finance' },
