@@ -140,6 +140,12 @@ export default async function ArticlePage({ params }: { params: Promise<{ catego
           ))}
         </div>
       )}
+
+      {/* Publication history */}
+      <div className="mt-10 pt-6 text-xs" style={{ borderTop: '1px solid var(--border)', color: '#9ca3af' }}>
+        <p>First published: {new Date(a.created_at).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+        <p className="mt-1">Last updated: {new Date(a.updated_at).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+      </div>
     </div>
   )
 }
