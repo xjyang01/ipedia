@@ -24,7 +24,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
     .select('*')
     .eq('status', 'published')
     .eq('category_slug', slug)
-    .order('created_at', { ascending: false })
+    .order('title', { ascending: true })
 
   return (
     <div>

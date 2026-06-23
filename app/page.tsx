@@ -49,7 +49,7 @@ export default async function Home() {
   const supabase = await createClient()
   const [{ data: featured }, { data: recent }] = await Promise.all([
     supabase.from('articles').select('*').eq('status', 'published').eq('featured', true).limit(3),
-    supabase.from('articles').select('*').eq('status', 'published').order('created_at', { ascending: false }).limit(12),
+    supabase.from('articles').select('*').eq('status', 'published').order('title', { ascending: true }).limit(50),
   ])
 
   return (
@@ -96,7 +96,7 @@ export default async function Home() {
       {/* Recent */}
       {recent && recent.length > 0 && (
         <div>
-          <h2 className="text-lg font-bold mb-4">Recently Added</h2>
+          <h2 className="text-lg font-bold mb-4">Articles</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {(recent as Article[]).map(a => <ArticleCard key={a.id} article={a} />)}
           </div>
